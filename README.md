@@ -1,70 +1,14 @@
-# Getting Started with Create React App
+This Blog website created using React . This is a basic Blog project which aims to learn and practice about the concept of "UseContext" hook . This is a very usefull hook . This is used in the place of "Porps" in files.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**REASON OF USING "useContext" =>**
+let there is many children components of App.js file and the children itself have their components (Making a tree like structure) so if the last node(children) needs some information from parent then we need to pass the props to all its 
+children till the goal children do not get the data required , but this can cause performance degrade and also if one node in tree wanted the information from another distanced node's data then it is very difficult and complex to sent and 
+recieve the data .so the concept of "useContext" is used.
 
-## Available Scripts
+**STEPS TO FOLLOW =>**
+1. first create context() =>context can be created using **createContext()** function (import creatContex from 'react'), then store all useable data in a container 
+2. provide context => return the containeer of data
+3. consume contex =>using the useContext() hool , we can use the required data [for example we need page in a componenet so we consume/use the data from container ::=> const {page}=useContext(file_name_where_context_created);
 
-In the project directory, you can run:
+here above the code use the same concept where -> the file "AppContext.js" is created and the context is written there , then the data is consume/used in another files.
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
